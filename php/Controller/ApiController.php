@@ -1,12 +1,16 @@
 <?php
-    class ApiController{
-        public function detailItem(){
-            require "php/Model/ItemsModel.php";		 // charger le fichier PHP
+    require "Controller.php";
+    class ApiController extends Controller{
+
+        public function __construct(){
+            parent::__construct();
+        }
+
+        public function detailItem($id){
+            require "php/Model/ItemsModel.php";
             $dbItem = new ItemsModel();
-            $pictureItem = $dbItem -> listenerPictureItem($id);
-            //$pictureItem.push($dbItem->listenerReviewsItem($id));
-            //echo json_encode($pictureItem);
-            $reviewsItem.push($dbItem->listenerReviewsItem($id));
-            echo json_encode(array("pictures"=>$pictureItem,"reviews"=>$reviewsItem));
+            $picturesItem = $dbItem->listenerPicturesItem($id);
+            $reviewsItem = $dbItem->listenerReviewsItem($id);
+            echo json_encode( array("pictures" => $picturesItem,"reviews"=>$reviewsItem) );
         }
     }

@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
 <?php require("header.php"); ?>
         <!-- Slider -->
         <div class="slider heightski">
@@ -171,9 +169,8 @@
                                 $i = 0;
                                 foreach($itemsHome as $item): 
                             ?>
-                            <li class="class<?php echo $i + 1 ?>">
+                            <li class="class<?php echo $i+1 ?>">
                                 <div class="arrival-overlay">
-                                    <!-- <img src="upload/arrival1.jpg" alt=""> -->
                                     <img src="<?php echo $item["url"] ?>" alt="">
                                     <img src="upload/new.png" alt="" class="new">
                                     <div class="arrival-mask">
@@ -183,20 +180,18 @@
                                     </div>
                                 </div>
                                 <div class="arr-content">
-                                    <a href="<?php echo HOST.FOLDER."single/".$item["iditems"] ; ?>">
-                                        <!-- <p>Brown Coat</p> -->
-                                        <p><?php echo $item["libelle"] ?>
+                                    <a href="<?php echo HOST.FOLDER."single/".$item["iditems"] ?>"> 
+                                        <p><?php echo $item["libelle"] ?></p>
                                     </a>
                                     <ul>
-                                        <!-- <li><span class="low-price">$899.00</span></li> -->
-                                        <li><span class="low-price"><?php echo $item["price"]?></span></li>
+                                        <li><span class="low-price"><?php echo $item["price"] ?>€</span></li>
                                     </ul>
 
                                     <div class="stars"><img src="upload/stars.png" alt=""></div>
                                 </div>
                             </li>
                             <?php
-                                $i = ($i + 1)%4;
+                                $i = ($i+1)%4;
                                 endforeach;
                             ?>
                         </ul>

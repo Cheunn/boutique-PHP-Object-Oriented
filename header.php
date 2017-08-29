@@ -1,4 +1,4 @@
-<?php require("head.php"); ?>
+    <?php require("head.php"); ?>
 <body>
     <!-- Preloader -->
     <div id="preloader">
@@ -38,10 +38,10 @@
                     </div>
                     <div class="right-line clearfix">
                         <ul>
-                        <?php if(isset($_SESSION["user"]["idclients"])) :  ?>  <!-- les sessions sont stockees dans le tableau User -->
+                            <?php if(isset($_SESSION["user"]["idclients"])) : ?>
                             <li><a href="#">My Account</a></li>
                             <li><a href="#">My Wishlist</a></li>
-                            <li><a href="/alsaleh_keita/Git/php-object-webforce3/logout">Checkout</a></li>
+                            <li><a href="http://localhost/Mike/php-object-webforce3/logout">Checkout</a></li>
                             <?php else: ?>
                             <li><a href="#login-box" class="login-window">Login</a></li>
                             <?php endif; ?>
@@ -51,11 +51,11 @@
                                 <a href="#"><img src="images/cart-white.png" alt="">
                                     <span>8 Items</span></a>
                             </div>
-                        </div>                    
+                        </div>
 
                         <div id="login-box" class="login-popup">
                             <a href="#" class="close"><img src="images/delete.png" class="btn_close" title="Close Window" alt="Close" /></a>
-                            <form method="post" class="signin" action="http://localhost/alsaleh_keita/Git/php-object-webforce3/user-register">
+                            <form method="post" class="signin" action="http://localhost/Mike/php-object-webforce3/user-register">
                                 <fieldset class="textbox">
                                     <h4 class="login-title">LOGIN </h4>
 
@@ -87,7 +87,7 @@
                                 </fieldset>
                             </form>
                         </div>
-                            
+
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -194,7 +194,7 @@
                                 <li><a href="about.html"><span>--</span>About</a></li>
                                 <li><a href="shortcodes.html"><span>--</span>Shortcodes</a></li>
                                 <li><a href="typography.html"><span>--</span>Typography</a></li>
-                                <li><a href="404.php"><span>--</span>404</a></li>
+                                <li><a href="404.html"><span>--</span>404</a></li>
                             </ul>
                         </li>
                         <li><a href="#">Blog</a>
