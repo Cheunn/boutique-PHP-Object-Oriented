@@ -334,6 +334,5 @@ require("header.php");
     <script type="text/javascript" src="<?php echo HOST.FOLDER ?>js/jquery.mousewheel.min.js"></script>
     <script type="text/javascript" src="<?php echo HOST.FOLDER ?>js/jquery.touchSwipe.min.js"></script>
     <script type="text/javascript" src="<?php echo HOST.FOLDER ?>js/Mike.js"></script>
-	
 </body>
 </html>

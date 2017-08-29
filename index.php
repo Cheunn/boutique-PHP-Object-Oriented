@@ -32,7 +32,7 @@
     
     $id = recoveryLastElemToUrl(); // Appel de function
 
-    // Rechuperation du chemin ( de l'url apres le nom de domaine)
+    // Recuperation du chemin ( de l'url apres le nom de domaine)
     // echo $_SERVER["REQUEST_URI"];die(); // Mike/php-object-webforce3/
 
 
@@ -53,6 +53,12 @@
                 require "php/Controller/ApiController.php"; // Charger le fichier php
                 $apiController = new ApiController();
                 $apiController->detailItem((int)$id);
+            break;
+
+            case FOLDER."shop-list": // Chargement de la Class et lancement de la methode
+                require "php/Controller/ApiController.php"; // Charger le fichier php
+                $apiController = new ApiController();
+                $apiController->searchItem();
             break;
 
             default: // Redirection vers la route 404
@@ -83,7 +89,15 @@
             break;
             
             case FOLDER."404":
-                include("404.php");
+                require "php/Controller/Controller.php";
+                Controller::show404();
+                
+            break;
+
+            case FOLDER."shop-list": // Chargement de la Class et lancement de la methode
+                require "php/Controller/ShopController.php"; // Charger le fichier php
+                $apiController = new ShopController();
+                $apiController->shopListView();
             break;
 
             default:
