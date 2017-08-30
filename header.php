@@ -205,4 +205,8 @@
 
 
         </header>
+        <script>
+            let hostDomaine = "<?php echo HOST.FOLDER; ?>";
+        </script>
+        
         <!-- End Header -->

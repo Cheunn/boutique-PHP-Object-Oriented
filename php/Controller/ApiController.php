@@ -23,14 +23,14 @@
                 $sql .=" categories_idcategories = ".$_POST["categorie"]." AND ";
                 $search = true;
             }
-           
-            $sql = substr($sql,0,-4);
             //si aucun filtre n'ai demandé 
             if($search == false){
                 $sql=1;
+            }else{
+                $sql .=" iditems = items_iditems GROUP BY iditems ";
             }
             // $sql = "price BETWEEN 20 AND 100";
-            $items = $this->itemsModel->select("*","items",$sql);
+            $items = $this->itemsModel->select("i.*, p.url","items i, pictures p",$sql);
             echo json_encode($items);
         }
 

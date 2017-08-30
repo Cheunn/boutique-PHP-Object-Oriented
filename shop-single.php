@@ -302,7 +302,7 @@ require("header.php");
 	    $( "#tabs" ).tabs();
 	    $( "#accordion" ).accordion();
 	</script>
-	<script type="text/javascript" src="<?php echo HOST.FOLDER ?>js/smoothproducts.min.js"></script>
+
 	<script type="text/javascript">
                 /* wait for images to load */
                 $(window).load( function() {
@@ -336,3 +336,6 @@ require("header.php");
     <script type="text/javascript" src="<?php echo HOST.FOLDER ?>js/Mike.js"></script>
 </body>
 </html>
+<!-- <?php
+	require_once("footer.php")
+?> -->
