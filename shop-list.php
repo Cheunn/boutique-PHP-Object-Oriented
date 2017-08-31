@@ -150,7 +150,7 @@
 
                                 </div>
                                     <?php
-                                        echo '<script>$("a#items-'.$item["iditems"].'.medium-button.button-red.add-cart").data("test", '.json_encode($item).');</script>';
+                                        echo '<script>$("a#items-'.$item["iditems"].'.medium-button.button-red.add-cart").data("$item", '.json_encode($item).');</script>';
                                         endforeach; 
                                     ?>
 
