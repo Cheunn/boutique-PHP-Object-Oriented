@@ -169,9 +169,6 @@
                 <nav id="nav">
                     <ul id="navlist" class="sf-menu clearfix">
                         <li class="current"><a href="<?php echo HOST.FOLDER ?>">Home</a>
-                            <ul class="sub-menu">
-                                
-                            </ul>
                         </li>
                         <li><a href="#">Shop</a>
                             <ul class="sub-menu">
@@ -182,19 +179,12 @@
                                 <li><a href="checkout.html"><span>--</span>Checkout</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Catégories</a>
+                        <li><a href="#">Catégorie</a>
                             <ul class="sub-menu">
                                 <?php
-                                    foreach($this->categories as $categorie){
-                                        echo "<li><a href='about.html'><span>--</span>".$categorie['name']."</a></li>";
-                                    }
+                                    foreach($this->categories as $categorie)
+                                        echo "<li><a href='about.html'><span>--</span>".$categorie["name"]."</a></li>";
                                 ?>
-                            </ul>
-                        </li>
-                        <li><a href="#">Blog</a>
-                            <ul class="sub-menu">
-                                <li><a href="blog.html"><span>--</span>Blog</a></li>
-                                <li><a href="blog-single.html"><span>--</span>Blog Single</a></li>
                             </ul>
                         </li>
                         <li><a href="contact.html">Contact</a></li>
@@ -205,8 +195,7 @@
 
 
         </header>
-        <script>
-            let hostDomaine = "<?php echo HOST.FOLDER; ?>";
-        </script>
-        
         <!-- End Header -->
+        <script>
+            let hostDomaine = "<?php echo HOST.FOLDER; ?>"
+        </script>

@@ -403,9 +403,10 @@
             });
             // END OF THE SECTION, HIDE MY ARROWS SEPERATLY FROM THE BULLETS
         });
+        $ = tpj
+        let typePage = 0;
     </script>
 
+<script type="text/javascript" src="<?php echo HOST.FOLDER ?>js/Mike.js"></script>
 
-<?php
-    require_once("footer.php");
-?>
+<?php require("footer.php"); ?>

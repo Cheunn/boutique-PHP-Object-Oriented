@@ -1,5 +1,6 @@
 <?php require("head.php"); ?>
 <body>
+
 <!-- content -->
 <div class="content">
 
